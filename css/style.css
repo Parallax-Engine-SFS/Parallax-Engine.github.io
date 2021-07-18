@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: block;
+    margin: 1px;
+}
+
+header {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    color: #ffffff;
+    padding: 20px;
+}
+
+header nav {
+    flex: 90%;
+    text-align: right;
+    padding-top: 10px;
+}
+
+header nav span {
+    cursor: pointer;
+    padding: 20px 30px;
+    color: #000000;
+}
+
+header nav span:hover {
+    color: black;
+    background-color: #00b7ff;
+}
+
+header .logo {
+    flex: 10%;
+ }
+
+ header .logo:hover {
+     background-color: hsl(0, 0%, 100%);
+ }
+
+header nav span.icon {
+   display: none;
+}
+
+@media screen and (max-width: 675px) {
+  header nav {
+    padding-top: 0;
+  }
+ header nav span {display: none;}
+ header  nav span.icon {
+      float: right;
+      display: block;
+  }
+  header nav .logo img {
+    width: 80px;
+    height: 80px;
+  }
+  }
+  
+  @media screen and (max-width: 675px) {
+ header nav.responsive {position: relative;}
+ header nav.responsive span.icon {
+       position: absolute;
+      right: 0;
+      top: 0;
+  }
+ header nav.responsive span {
+      float: none;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+  }
+
+  main .intro-container {
+    background-attachment: scroll;
+  }
+
+  main .intro-container h1 {
+    text-align: center;
+  }
+
+  main .stock-container {
+    background-attachment: scroll;
+  }
+
+  main .reviews-container {
+    background-attachment: scroll;
+  }
+  }
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+footer p {
+    text-align: center;
+}
+
+main {
+    margin: 0;
+}
+
+main .intro-container {
+    background-image: url("assets/Images/bg.jpg");
+    background-position: center;
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    width: auto;
+    min-height: 512px;
+    color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .intro-container h1 {
+  justify-content: center;
+  align-items: center;
+    font-family: 'Otomanopee One', sans-serif;
+    font-size: 50px;
+}
+
+main .stock-container {
+    background-image: url("assets/Images/bgstock.jpg");
+    background-position: center;
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    width: auto;
+    min-height: 512px;
+    color: #000000;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+main .stock-container div {
+    margin: 10px;
+    color: azure;
+}
+
+main .stock-container div h2 {
+    flex-wrap: wrap;
+    display: block;
+    font-family: 'Otomanopee One', sans-serif;
+    font-size: 50px;
+    width: 100%;
+}
+
+main .stock-container div span {
+    display: block;
+    width: fit-content;
+    border-radius: 15px;
+    border: 1px solid white;
+    padding: 10px;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 50px #fff;
+}
+
+main .stock-container div span:hover {
+    color: white;
+    background-color: #000;
+    box-shadow: 0 0 50px #000;
+}
+
+
+main .reviews-container {
+    background-image: url("assets/Images/reviewer2.jpg");
+    background-position: center;
+    background-repeat: repeat-x;
+    width: auto;
+    min-height: 512px;
+    color: #000000;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+main .reviews-container div {
+    margin: 10px;
+    color: #000000;
+}
+
+main .reviews-container div h2 {
+    flex-wrap: wrap;
+    display: block;
+    font-family: 'Otomanopee One', sans-serif;
+    font-size: 50px;
+    width: 100%;
+}
+
+main .reviews-container div span {
+    display: block;
+    width: fit-content;
+    border-radius: 15px;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 10px;
+    cursor: pointer;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 50px rgb(0, 0, 0);
+}
+
+main .reviews-container div span:hover {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 253, 253);
+    box-shadow: 0 0 50px rgb(255, 255, 255);
+}
+
+main aside #stockChart {
+  display: none;
+}
+
+main aside #stockChart2 {
+  display: none;
+}
+
+main #ad {
+  display: flex;
+  justify-content: center;
+  background-color: #00000027;
+}
+
+main #front_ad {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #00000027;
+}
+
+main #front_ad img {
+  padding: 0;
+  width: 100%;
+}
+
+
+.about {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+
+  .about-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatemodals;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatemodals;
+    animation-duration: 0.4s
+  }
+  
+
+  @-webkit-keyframes animatemodals {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatemodals {
+    from 
+    {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  
+
+  .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .about-header {
+    padding: 2px 16px;
+    background-color: #000a00;
+    color: white;
+  }
+  
+  .about-body {padding: 2px 16px;}
+  
+.stock {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+
+  .stock-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatemodals;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatemodals;
+    animation-duration: 0.4s
+  }
+
+  
+  .stock-header {
+    padding: 2px 16px;
+    background-color: #094d09;
+    color: white;
+  }
+  
+  .stock-body {
+    padding: 10px 16px;
+  }
+
+  .stock-body span {
+    padding: 8px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+
+  .stock-body div {
+    display: flex;
+  }
+
+  .stock-body div #button2 {
+    margin-left: auto;
+  }
+
+  .stock-body span:hover {
+    box-shadow: 0 0 50px #f1f1f1;
+  }
+
+  .review {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+
+  .review-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatemodals;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatemodals;
+    animation-duration: 0.4s
+  }
+
+  
+  .review-header {
+    padding: 2px 16px;
+    background-color: #080331;
+    color: white;
+  }
+  
+  .review-body {
+    padding: 2px 16px;
+  }
+ 
+  .aud-review {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .aud-review a {
+    text-decoration: none;
+    color: black;
+    width: fit-content;
+    padding: 10px;
+  }
+
+  .aud-review a:hover {
+    background: #000;
+    color: #fff;
+  }
+
+  .heading {
+    font-size: 25px;
+    margin-right: 25px;
+  }
+  
+  .fa {
+    font-size: 25px;
+  }
+  
+  .checked {
+    color: orange;
+  }
+  
+  .side {
+    float: left;
+    width: 15%;
+    margin-top: 10px;
+  }
+  
+  .middle {
+    float: left;
+    width: 70%;
+    margin-top: 10px;
+  }
+  
+  .right {
+    text-align: right;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .bar-container {
+    width: 100%;
+    background-color: #f1f1f1;
+    text-align: center;
+    color: white;
+  }
+  
+  .bar-5 {width: 60%; height: 18px; background-color: #f70000;}
+  .bar-4 {width: 30%; height: 18px; background-color: #2152f3;}
+  .bar-3 {width: 10%; height: 18px; background-color: #90a3a5;}
+  .bar-2 {width: 4%; height: 18px; background-color: #ff7300;}
+  .bar-1 {width: 15%; height: 18px; background-color: #36e7f4;}
+  
+  @media (max-width: 420px) {
+    .side, .middle {
+      width: 100%;
+    }
+
+    .right {
+      display: none;
+    }
+    main #ad img {
+      padding: 0;
+      width: 100%;
+    }
+  }
+  

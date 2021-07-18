@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Engine</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="css/assets/Images/logo.jpg" type="image/png">
+</head>
+
+<body>
+    <!--Navbar-->
+    <header>
+        <!--logo container-->
+        <a href="index.html" class="logo">
+          <picture>
+            <source media="(min-width:675px)" srcset="css/assets/Images/LogoT.jpg">
+            <img src="css/assets/Images/logoS.jpg" alt="LOGO">
+            </picture>
+          </a>
+        <nav id="myNavbar">
+            <!--Links-->
+            <span onclick="openModal('stocks')">Profitable Stocks</span>
+            <span onclick="openModal('reviews')">Reviews</span>
+            <span onclick="openModal('about')">About Us</span>
+            <span href="javascript:void(0);" class="icon" onclick="showUsers()">
+                <i class="fa fa-bars"></i>
+              </span>
+        </nav>
+    </header>
+    <main>
+      <aside id="front_ad">
+        <img src="css/assets/Images/IMG-20210715-WA0008.jpg" alt="Ad" width="480">
+      </aside>
+        <!--Intro to Parallax Engine-->
+        <section class="intro-container">
+            <!--Heading-->
+            <h1>Parallax Engine</h1>
+        </section>
+        <section class="stock-container" id="stockCon">
+            <div>
+                <h2>Predict Profitable Stocks</h2>
+                <span onclick="openModal('stocks')">Explore Now</span>
+            </div>
+        </section>
+        <aside>
+            <div id="stockChart" style="width: fit-content; height: 200px;">
+            </div>
+            <div id="stockChart2" style="width: fit-content; height: 200px;"></div>
+        </aside>
+        <aside id="ad">
+          <img src="css/assets/Images/Ad.jpg" alt="Ad" width="480" height="480">
+        </aside>
+        <section class="reviews-container" id="reviewCon">
+            <div>
+                <h2>Read Our Reviews</h2>
+                <span onclick="openModal('reviews')">Explore Now</span>
+            </div>
+        </section>
+    </main>
+    <!--Modals-->
+    <!--About-->
+    <div id="aboutSection" class="about">
+        <!-- about content -->
+        <div class="about-content">
+            <div class="about-header">
+                <span class="close">&times;</span>
+                <h2>About Us</h2>
+            </div>
+            <div class="about-body">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor, laboriosam officiis laudantium rem
+                    consequatur itaque exercitationem vero veritatis autem. Odio unde sit minus. Cupiditate cumque autem
+                    ullam eos possimus aut.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor, laboriosam officiis laudantium rem
+                    consequatur itaque exercitationem vero veritatis autem. Odio unde sit minus. Cupiditate cumque autem
+                    ullam eos possimus aut.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor, laboriosam officiis laudantium rem
+                    consequatur itaque exercitationem vero veritatis autem. Odio unde sit minus. Cupiditate cumque autem
+                    ullam eos possimus aut.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor, laboriosam officiis laudantium rem
+                    consequatur itaque exercitationem vero veritatis autem. Odio unde sit minus. Cupiditate cumque autem
+                    ullam eos possimus aut.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="stockSection" class="stock">
+        <!-- stock content -->
+        <div class="stock-content">
+            <div class="stock-header">
+                <span class="close">&times;</span>
+                <h2>Profitable Stocks</h2>
+            </div>
+            <div class="stock-body">
+                <div>
+                <span id="button1">Nifty</span><br><br>
+                <span id="button2">Sensex</span><br><br>
+            </div>
+            <br><br>
+                <div>
+                <span id="button" onclick="generate()">Generate</span>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="reviewSection" class="review">
+
+        <div class="review-content">
+            <div class="review-header">
+                <span class="close">&times;</span>
+                <h2>Reviews</h2>
+            </div>
+            <div class="review-body">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<span class="heading">User Rating</span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<p>4.1 average based on 280 reviews.</p>
+<hr style="border:3px solid #f1f1f1">
+
+<div class="row">
+  <div class="side">
+    <div>5 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-5"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>170</div>
+  </div>
+  <div class="side">
+    <div>4 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-4"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>63</div>
+  </div>
+  <div class="side">
+    <div>3 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-3"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>15</div>
+  </div>
+  <div class="side">
+    <div>2 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-2"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>12</div>
+  </div>
+  <div class="side">
+    <div>1 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-1"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>20</div>
+  </div>
+</div>
+<div class="aud-review">
+    <a href="mailto:binarybots@lotusvalleygurgaon.com">Review Us</a>
+</div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Footer -->
+    <footer>
+        <p>Copyright &copy; SFS Parallax Engine</p>
+    </footer>
+
+    <!--Using Google Charts API to showcase the data-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
